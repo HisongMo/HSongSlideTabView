@@ -1,5 +1,6 @@
 # HSongSlideTabView
 ## 让TabView变的更酷!
+##### 未来会拓展它的自由度，添加更多可调整的属性
 ### 1.展示效果
 <br />
 <div>
@@ -11,7 +12,7 @@
   
 #### ①首先引入HSongSlideTabView
     import HSongSlideTabView
-#### ②定义TabView样式
+#### ②定义TabView样式，并使用，非常简便
 ##### 无图标（如1中左图）
     struct ContentView: View {
         let manager: Manager = Manager(leftTitle: "你好", rightTitle: "欢迎")
