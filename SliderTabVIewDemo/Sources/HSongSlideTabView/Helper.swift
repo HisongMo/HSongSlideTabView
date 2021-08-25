@@ -31,7 +31,7 @@ public class Manager: ObservableObject {
     @Published var bgColorHex: Int = 0xffffff
     @Published var sliderColorHex: Int = 0x00a1ff
     
-    init(leftImg: String? = nil,
+    public init(leftImg: String? = nil,
          leftSelectedImg: String? = nil,
          leftTitle: String = "主页",
          rightImg: String? = nil,
