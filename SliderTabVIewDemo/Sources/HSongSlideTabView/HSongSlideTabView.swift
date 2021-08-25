@@ -25,7 +25,7 @@ public struct HSongSlideTabView<Pages>: View where Pages: View {
     public var body: some View {
         ZStack {
             
-            HStack {
+            HStack(spacing: 0) {
                 pages
                     .frame(width: width_yhc, height: height_yhc)
             }
