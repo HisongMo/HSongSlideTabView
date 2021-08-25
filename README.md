@@ -11,7 +11,9 @@
 ### 2.使用
   
 #### ①首先引入HSongSlideTabView
+  ```swift
     import HSongSlideTabView
+  ```
 #### ②定义TabView样式，并使用，非常简便
 ##### 无图标（如1中左图）
   ```swift
@@ -37,3 +39,10 @@
         }
     }
   ```
+  
+  ### 3.安装
+  
+  #### 支持通过cocoapods安装
+  
+  在你的项目中的Podfile添加`rubypod HSongSlideTabView`即可
+  
