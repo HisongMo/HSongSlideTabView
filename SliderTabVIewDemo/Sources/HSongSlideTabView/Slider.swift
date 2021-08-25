@@ -47,7 +47,14 @@ public struct Slider: View {
                 
                 //percent
                 let distance_x = calculate_distance_x(p1: value.startLocation, p2: value.location)
-                manager.toRight = distance_x > 0
+                
+                //judge slide direction
+                if distance_x > 0 && value.startLocation.x < width_yhc / 2.0 {
+                    manager.toRight = true
+                } else if distance_x <= 0 && value.startLocation.x > width_yhc / 2.0 {
+                    manager.toRight = false
+                }
+                
                 if (manager.toRight && value.startLocation.x <= width_yhc / 2.0) || (!manager.toRight && value.startLocation.x > width_yhc / 2.0) {
                     manager.slidePercent = distance_x / (bgWidth / 2.0)
                 }
