@@ -26,6 +26,7 @@
     }
   ```
  ##### 有图标（如1中右图）
+  ```swift
     struct ContentView: View {
         let manager: Manager = Manager(leftImg: "dianpu", leftSelectedImg: "dianpu-sed",leftTitle: "你好", rightImg: "yinliao", rightSelectedImg: "yinliao-sed",rightTitle: "欢迎")
         var body: some View {
@@ -35,3 +36,4 @@
             }
         }
     }
+  ```
