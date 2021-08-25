@@ -2,7 +2,7 @@
 <p align="leading">
     <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platforms" />
     <img src="https://img.shields.io/badge/Swift-5-orange.svg" />
-    <a href="https://github.com/ThasianX/Elegant-Pages/blob/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
+    <a href="https://github.com/Thered-key/HSongSlideTabView/blob/main/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
 </p>
 
 ## 让TabView变的更酷!
