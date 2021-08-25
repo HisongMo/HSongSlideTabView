@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct HSongSlideTabView<Pages>: View where Pages: View {
+public struct HSongSlideTabView<Pages>: View where Pages: View {
     
     @ObservedObject var manager: Manager
     
@@ -17,12 +17,12 @@ struct HSongSlideTabView<Pages>: View where Pages: View {
     
     public let pages: PageContainer<Pages>
     
-    init(manager: Manager, @PageViewBuilder builder: () -> PageContainer<Pages>) {
+    public init(manager: Manager, @PageViewBuilder builder: () -> PageContainer<Pages>) {
         self.manager = manager
         pages = builder()
     }
     
-    var body: some View {
+    public var body: some View {
         ZStack {
             
             HStack {

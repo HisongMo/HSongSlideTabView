@@ -8,7 +8,7 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct Slider: View {
+public struct Slider: View {
     
     @ObservedObject var manager: Manager
     
@@ -107,7 +107,7 @@ struct Slider: View {
             }
     }
     
-    var body: some View {
+    public var body: some View {
         GeometryReader { geo in
             
             RoundedRectangle(cornerRadius: 16)
@@ -182,6 +182,6 @@ struct Slider: View {
     }
 }
 
-func calculate_distance_x(p1: CGPoint, p2: CGPoint) -> CGFloat {
+public func calculate_distance_x(p1: CGPoint, p2: CGPoint) -> CGFloat {
     p2.x - p1.x
 }

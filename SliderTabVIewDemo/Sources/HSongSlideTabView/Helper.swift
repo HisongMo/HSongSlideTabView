@@ -13,7 +13,7 @@ let width_yhc = UIScreen.main.bounds.width
 let height_yhc = UIScreen.main.bounds.height
 
 @available(iOS 13.0, *)
-class Manager: ObservableObject {
+public class Manager: ObservableObject {
     //Slide Control
     @Published var isLeft: Bool = true
     @Published var slidePercent: CGFloat = 0
@@ -50,7 +50,7 @@ class Manager: ObservableObject {
 
 @available(iOS 13.0, *)
 extension Color {
-    init(hex: Int, alpha: Double = 1) {
+    public init(hex: Int, alpha: Double = 1) {
         let components = (
             R: Double((hex >> 16) & 0xff) / 255,
             G: Double((hex >> 08) & 0xff) / 255,

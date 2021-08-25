@@ -9,13 +9,13 @@ import SwiftUI
 
 
 @available(iOS 13.0, *)
-struct HSTabItem: View {
+public struct HSTabItem: View {
         
     @State var leftImg: Bool = true
-    var img: String?
-    var title: String
+    public var img: String?
+    public var title: String
     
-    var body: some View {
+    public var body: some View {
             
             if leftImg {
                 HStack {
