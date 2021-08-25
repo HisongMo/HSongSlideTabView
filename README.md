@@ -48,11 +48,11 @@
   
   ### 4.Author
 
-    Thered-key
+  Thered-key
 
   ### 5.License
 
-    `AlertToast` is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
+  `AlertToast` is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
 
   ---
   
