@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "HSongSlideTabView"
-  spec.version      = "1.0.6"
+  spec.version      = "1.0.7"
   spec.summary      = "Slide TabView is so cool"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-  第一个版本（第六次修改）
+  第一个版本（第七次修改）
                    DESC
 
   spec.homepage     = "https://github.com/Thered-key/HSongSlideTabView.git"
