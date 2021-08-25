@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "HSongSlideTabView"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
   spec.summary      = "Slide TabView is so cool"
 
   # This description is used to generate tags and improve search results.
