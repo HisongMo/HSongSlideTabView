@@ -44,5 +44,15 @@
   
   #### 支持通过cocoapods安装
   
-  在你的项目中的Podfile添加`rubypod HSongSlideTabView`即可
+  在你的项目中的Podfile添加`pod HSongSlideTabView`即可
+  
+  ### 4.Author
+
+    Thered-key
+
+  ### 5.License
+
+    `AlertToast` is available under the MIT license. See the [LICENSE](LICENSE) file for more info.
+
+  ---
   
