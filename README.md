@@ -9,4 +9,16 @@
 
 ### 2.使用
   
-    import swiftUI
+#### ①首先引入HSongSlideTabView
+    import HSongSlideTabView
+#### ②定义TabView样式
+##### 无图标
+    struct ContentView: View {
+        let manager: Manager = Manager(leftTitle: "你好", rightTitle: "欢迎")
+        var body: some View {
+            HSongSlideTabView(manager: manager) {
+                AView()
+                BView()
+            }
+        }
+    }
