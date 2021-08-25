@@ -14,7 +14,7 @@
     import HSongSlideTabView
 #### ②定义TabView样式，并使用，非常简便
 ##### 无图标（如1中左图）
-  '''swift
+  ‘’‘swift
     struct ContentView: View {
         let manager: Manager = Manager(leftTitle: "你好", rightTitle: "欢迎")
         var body: some View {
@@ -24,7 +24,7 @@
             }
         }
     }
-  '''
+  ‘’‘
  ##### 有图标（如1中右图）
     struct ContentView: View {
         let manager: Manager = Manager(leftImg: "dianpu", leftSelectedImg: "dianpu-sed",leftTitle: "你好", rightImg: "yinliao", rightSelectedImg: "yinliao-sed",rightTitle: "欢迎")
