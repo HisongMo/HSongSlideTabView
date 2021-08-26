@@ -48,11 +48,11 @@
   
   ### 3.安装
   
-    #### 支持通过cocoapods安装
+  #### 支持通过cocoapods安装
   
         在你的项目中的Podfile添加`pod HSongSlideTabView`即可
     
-    #### 直接下载示例
+  #### 直接下载示例
         
         将示例中的H`SongSlideTabView`文件夹导入到自己的项目即可
   
