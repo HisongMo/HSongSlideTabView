@@ -54,7 +54,7 @@
     
   #### 直接下载示例
         
-  ##### 将示例中的H`SongSlideTabView`文件夹导入到自己的项目即可
+  ##### 将示例中的`HSongSlideTabView`文件夹导入到自己的项目即可
   
   ### 4.Author
 
