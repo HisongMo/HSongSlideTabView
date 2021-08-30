@@ -20,31 +20,46 @@ public class Manager: ObservableObject {
     @Published var toRight: Bool = true
     
     //TabItem
-    @Published var leftImg: String? = nil
-    @Published var leftSelectedImg: String? = nil
+    @Published var leftImg_light: String? = nil
+    @Published var leftImg_dark: String? = nil
+    @Published var leftSelectedImg_light: String? = nil
+    @Published var leftSelectedImg_dark: String? = nil
     @Published var leftTitle: String = "主页"
-    @Published var rightImg: String? = nil
-    @Published var rightSelectedImg: String? = nil
+    @Published var rightImg_light: String? = nil
+    @Published var rightImg_dark: String? = nil
+    @Published var rightSelectedImg_light: String? = nil
+    @Published var rightSelectedImg_dark: String? = nil
     @Published var rightTitle: String = "副页"
     
     //Configure
-    @Published var bgColorHex: Int = 0xffffff
-    @Published var sliderColorHex: Int = 0x00a1ff
+    @Published var bgColorHex: Int? = 0xffffff
+    @Published var sliderColorHex: Int? = 0x00a1ff
     
-    public init(leftImg: String? = nil,
-         leftSelectedImg: String? = nil,
-         leftTitle: String = "主页",
-         rightImg: String? = nil,
-         rightSelectedImg: String? = nil,
-         rightTitle: String = "副页",
-         bgColorHex: Int = 0xffffff,
-         sliderColorHex: Int = 0x00a1ff) {
-        self.leftImg = leftImg
-        self.leftSelectedImg = leftSelectedImg
+    /// 图片推荐尺寸@1x 25 @2x 50 @3x 75
+    public init(leftImg_light: String? = nil,
+                leftImg_dark: String? = nil,
+                leftSelectedImg_light: String? = nil,
+                leftSelectedImg_dark: String? = nil,
+                leftTitle: String = "主页",
+                rightImg_light: String? = nil,
+                rightImg_dark: String? = nil,
+                rightSelectedImg_light: String? = nil,
+                rightSelectedImg_dark: String? = nil,
+                rightTitle: String = "副页",
+                bgColorHex: Int? = nil,
+                sliderColorHex: Int? = nil) {
+        self.leftImg_light = leftImg_light
+        self.leftImg_dark = leftImg_dark
+        self.leftSelectedImg_light = leftSelectedImg_light
+        self.leftSelectedImg_dark = leftSelectedImg_dark
         self.leftTitle = leftTitle
-        self.rightImg = rightImg
-        self.rightSelectedImg = rightSelectedImg
+        self.rightImg_light = rightImg_light
+        self.rightImg_dark = rightImg_dark
+        self.rightSelectedImg_light = rightSelectedImg_light
+        self.rightSelectedImg_dark = rightSelectedImg_dark
         self.rightTitle = rightTitle
+        self.bgColorHex = bgColorHex
+        self.sliderColorHex = sliderColorHex
     }
 }
 

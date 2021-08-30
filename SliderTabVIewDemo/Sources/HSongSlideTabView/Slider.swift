@@ -10,6 +10,8 @@ import SwiftUI
 @available(iOS 13.0, *)
 public struct Slider: View {
     
+    @Environment(\.colorScheme) var colorScheme
+        
     @ObservedObject var manager: Manager
     
     var bgWidth: CGFloat = width_yhc - 30
@@ -117,14 +119,15 @@ public struct Slider: View {
     public var body: some View {
         GeometryReader { geo in
             
+            // 背景
             RoundedRectangle(cornerRadius: 16)
-                .fill(Color.init(hex: manager.bgColorHex))
+                .fill(Color.init(hex: manager.bgColorHex ?? (colorScheme == .light ? 0xEDEEEE : 0x282828)))
                 .frame(width: bgWidth, height: bgHeight)
                 .shadow(radius: 8)
             
-            
-            if manager.leftImg != nil {
-                HSTabItem(img: manager.leftImg, title: manager.leftTitle)
+            // 标题
+            if manager.leftImg_light != nil {
+                HSTabItem(img: colorScheme == .light ? manager.leftImg_light : manager.leftImg_dark, title: manager.leftTitle)
                     .position(CGPoint(x: bgWidth_1_4, y: bg_y))
                     .onTapGesture {
                         isTap = true
@@ -134,7 +137,7 @@ public struct Slider: View {
                             manager.slidePercent = -1
                         }
                     }
-                HSTabItem(img: manager.rightImg, title: manager.rightTitle)
+                HSTabItem(img: colorScheme == .light ? manager.rightImg_light : manager.rightImg_dark, title: manager.rightTitle)
                     .foregroundColor(.black)
                     .position(CGPoint(x: bgWidth_3_4, y: bg_y))
                     .onTapGesture {
@@ -169,15 +172,17 @@ public struct Slider: View {
                     }
             }
             
+            // 滑块
             ZStack {
                 RoundedRectangle(cornerRadius: 16)
-                    .fill(Color.init(hex: manager.sliderColorHex))
+                    .fill(Color.init(hex: manager.sliderColorHex ?? (colorScheme == .dark ? 0x2A95D3 : 0x00A1FF)))
                     .frame(width: bgWidth / 2.0 - 20, height: bgHeight - 15)
+                    .shadow(radius: 2)
 
                 if manager.isLeft {
-                    HSTabItem(img: manager.leftSelectedImg, title: manager.leftTitle)
+                    HSTabItem(img: colorScheme == .light ? manager.leftSelectedImg_light : manager.leftSelectedImg_dark, title: manager.leftTitle)
                 } else {
-                    HSTabItem(img: manager.rightSelectedImg, title: manager.rightTitle)
+                    HSTabItem(img: colorScheme == .light ? manager.rightSelectedImg_light : manager.rightSelectedImg_dark, title: manager.rightTitle)
                 }
             }
             .position(CGPoint(x: isTap ? (manager.isLeft ? bgWidth_1_4 : bgWidth_3_4) : ctrlPoint_x, y: bg_y))

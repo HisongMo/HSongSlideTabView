@@ -8,12 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
-    let manager: Manager = Manager(leftTitle: "你好", rightTitle: "欢迎")
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    var bgColorHex: Int {
+        colorScheme == .light ? 0xFF9900 : 0x6CE6E5
+    }
+
+    var manager: Manager {
+        Manager(leftImg_light: "mima-light", leftImg_dark: "mima-dark", leftSelectedImg_light: "mima-light-sed", leftSelectedImg_dark: "mima-dark-sed", leftTitle: "密码", rightImg_light: "wupin-light", rightImg_dark: "wupin-dark", rightSelectedImg_light: "wupin-light-sed", rightSelectedImg_dark: "wupin-dark-sed", rightTitle: "记物")
+    }
     var body: some View {
         HSongSlideTabView(manager: manager) {
             AView()
             BView()
         }
+        
+        
     }
 }
 

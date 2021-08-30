@@ -9,7 +9,18 @@ import SwiftUI
 
 struct BView: View {
     var body: some View {
-        Text("World hello!")
+        ZStack {
+            Rectangle()
+                .fill(Color.init(hex: 0x00A1FF))
+            ZStack {
+                RoundedRectangle(cornerRadius: 16)
+                    .fill(Color.init(hex: 0xFF9900))
+                    .frame(width: 400 * 0.618, height: 400, alignment: .center)
+                    .shadow(radius: 8)
+                Text("World hello!")
+            }
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

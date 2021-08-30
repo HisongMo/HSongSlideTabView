@@ -11,6 +11,8 @@ import SwiftUI
 @available(iOS 13.0, *)
 public struct HSTabItem: View {
         
+    @Environment(\.colorScheme) var colorScheme
+    
     @State var leftImg: Bool = true
     public var img: String?
     public var title: String
@@ -23,6 +25,7 @@ public struct HSTabItem: View {
                         Image(img!)
                     }
                     Text(title)
+                        .foregroundColor(Color.init(hex: colorScheme == .light ? 0x000000 : 0xffffff))
                 }
             }
     }
